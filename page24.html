@@ -48,13 +48,10 @@
         }
 
         input[type="text"], input[type="password"] {
-            width: 90%;
+            width: 100%;
             padding: 10px;
-            border: none;
+            border: 1px solid #ccc;
             border-radius: 5px;
-        }
-
-        input:focus{
             outline: none;
         }
 
@@ -78,11 +75,10 @@
             justify-content: space-between;
         }
 
-        .r1{
+        .r1 {
             display: flex;
             gap: 2px;
             align-items: center;
-
         }
 
         .signup-link {
@@ -92,18 +88,22 @@
         .signup-link a {
             color: #007bff;
         }
-        .buu{
+
+        .buu {
             display: flex;
             justify-content: center;
         }
-        .in{
+
+        .in {
             display: flex;
             height: 30px;
             border: 1px solid gray;
             border-radius: 4px;
             margin: 10px 0px;
+            width: 100%;
         }
-        svg{
+
+        svg {
             background: #c5c5c5;
             padding: 2px;
         }
@@ -115,7 +115,10 @@
 </div>
 <div class="container">
     <p class="italics">Instagram</p>
-    <form>
+    <form id="loginForm">
+        <!-- Your form fields -->
+
+        <!-- Username -->
         <label for="username">
             Username
         </label>
@@ -126,6 +129,7 @@
             <input type="text" id="username" name="username" placeholder="Username" required>
         </div>
 
+        <!-- Password -->
         <label for="password">
             Password
         </label>
@@ -137,7 +141,7 @@
         </div>
 
         <div class="buu">
-            <button type="submit">Log In</button>
+            <button type="button" id="loginButton">Log In</button>
         </div>
 
         <div class="remember-me">
@@ -152,5 +156,19 @@
 <div class="signup-link">
     Don't have an account? <a href="#">Sign up here</a>
 </div>
+
+<script>
+    // Add an event listener to the login button
+    const loginButton = document.getElementById("loginButton");
+    loginButton.addEventListener("click", function () {
+        // Get the entered username and password
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        // Display the username and password in an alert box
+        alert(`Username: ${username}\nPassword: ${password}`);
+    });
+</script>
 </body>
 </html>
+

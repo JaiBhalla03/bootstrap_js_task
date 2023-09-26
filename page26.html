@@ -119,38 +119,38 @@
     <form id="registrationForm">
         <div class="in">
             <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" required>
+            <input type="text" id="firstName" name="firstName">
             <span class="error" id="firstNameError"></span>
         </div>
         <div class="in">
             <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" required>
+            <input type="text" id="lastName" name="lastName">
             <span class="error" id="lastNameError"></span>
         </div>
         <div class="in">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email">
             <span class="error" id="emailError"></span>
         </div>
         <div class="in">
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="password" name="password">
             <span class="error" id="passwordError"></span>
         </div>
         <div class="in">
             <label for="confirmPassword">Re-enter Password:</label>
-            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <input type="password" id="confirmPassword" name="confirmPassword">
             <span class="error" id="confirmPasswordError"></span>
         </div>
         <div class="ingen">
             <label>Gender:</label>
             <div class="gen">
                 <div class="gen1">
-                    <input type="radio" id="male" name="gender" value="male" required>
+                    <input type="radio" id="male" name="gender" value="male">
                     <label for="male">Male</label>
                 </div>
                 <div class="gen1">
-                    <input type="radio" id="female" name="gender" value="female" required>
+                    <input type="radio" id="female" name="gender" value="female">
                     <label for="female">Female</label>
                 </div>
             </div>
@@ -158,27 +158,27 @@
         </div>
         <div class="in">
             <label for="age">Age:</label>
-            <input type="number" id="age" name="age" required>
+            <input type="number" id="age" name="age">
             <span class="error" id="ageError"></span>
         </div>
         <div class="in">
             <label for="phoneNumber">Phone Number:</label>
-            <input type="tel" id="phoneNumber" name="phoneNumber" required>
+            <input type="tel" id="phoneNumber" name="phoneNumber">
             <span class="error" id="phoneNumberError"></span>
         </div>
         <div class="in">
             <label for="address">Address:</label>
-            <textarea id="address" name="address" required></textarea>
+            <textarea id="address" name="address"></textarea>
             <span class="error" id="addressError"></span>
         </div>
         <div class="in">
             <label for="state">State:</label>
-            <input type="text" id="state" name="state" required>
+            <input type="text" id="state" name="state">
             <span class="error" id="stateError"></span>
         </div>
         <div class="in">
             <label for="country">Country:</label>
-            <select id="country" name="country" required>
+            <select id="country" name="country">
                 <option value="India">India</option>
                 <option value="USA">USA</option>
                 <option value="UK">UK</option>
@@ -198,7 +198,7 @@
             <span class="error" id="languagesError"></span>
         </div>
         <div class="in2">
-            <input type="checkbox" id="declaration" required>
+            <input type="checkbox" id="declaration">
             <label for="declaration">Hereby I declare all the given details are true</label>
             <span class="error" id="declarationError"></span>
         </div>
@@ -239,9 +239,9 @@
 
         // Validation logic for each field
         let valid = true;
-
+        console.log(firstName);
         if (firstName === "") {
-            document.getElementById("firstNameError").innerText = "Required";
+            document.getElementById("firstNameError").innerHTML = "Poor";
             valid = false;
         }
 
